@@ -6,6 +6,11 @@ paginate: 10
 taxonomies:
   series: 'series'
   tags: 'tags'
+markup:
+  tableOfContents:
+    endLevel: 3
+    ordered: false
+    startLevel: 1
 params:
   brand: Elephant In The Room
   brand_image: https://mwtaylor.github.io/ElephantLogos/elephant_itr400.png

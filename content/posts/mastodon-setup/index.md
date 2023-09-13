@@ -1,8 +1,8 @@
 ---
 title: "Starting a Personal Mastodon Server"
 date: 2023-09-10T20:29:03-07:00
-draft: true
-summary: "Hi"
+draft: false
+summary: "Introduction to Mastodon and how to get started using it to micro-blog."
 series: Personal Mastodon Server
 ---
 
@@ -19,6 +19,8 @@ server [mastodon.social][mastodon.social] which is a great choice. They also mai
 [Mastodon Server Covenant] which specifies some basic rules around server 
 availability and moderation. Browse through this and see if you find one that interests you. Remember that no matter
 which server you choose you can still interact with everyone else on other Mastodon servers.
+
+![Screenshot of my Mastodon home page](MastodonHeader.png "Mastodon Home")
 
 # Why Set Up Your Own Server
 
@@ -116,6 +118,8 @@ Go to SES in the AWS console for the region closest to you. Click "Create identi
 Put in the domain you are using for your Mastodon server. Then click "Use a custom MAIL FROM domain" with the subdomain 
 "mail". Don't publish to Route 53 unless you are using Route 53 for your domain registrar. I left the rest as default 
 and created the identity.
+
+![Screenshot of the AWS console with the configuration in this post filled in on the SES create identity form](CreateSESIdentity.png "SES settings in AWS console")
 
 Publish the DNS records in your domain registrar that AWS gives you for MAIL FROM and DKIM.
 
