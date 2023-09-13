@@ -2,3 +2,7 @@
     border: none;
     border-radius: 0;
 }
+
+li.bullet ~ li.bullet {
+    margin-top: 0.5em;
+}
