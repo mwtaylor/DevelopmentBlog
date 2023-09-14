@@ -1,7 +1,7 @@
 ---
 title: "Federating Your New Server"
 date: 2023-09-12T21:57:21-07:00
-draft: true
+draft: false
 summary: "How to Get Your New Mastodon Server to Start Federating with Other Servers."
 series: Personal Mastodon Server
 ---
@@ -32,7 +32,7 @@ you later. Just keep in mind that you should not post more than 5 posts at this 
 
 ## What should you post? 
 
-A common way to get started among Mastodon users is to post an introduction about yourself. For your first post write a 
+A common way among Mastodon users to get started is to post an introduction about yourself. For your first post write a 
 short bit about yourself and your interests. Potentially include some hashtags related to content you intend to post 
 about or want to read. Include the hashtag #introduction in your post. This helps everyone discover new interesting 
 people to follow by following the #introduction hashtag.
@@ -46,7 +46,9 @@ that is the limit of pinned posts you can have. This is important because only p
 to start. Once one user on a server follows you then all subsequent users following you from the same server will see
 all your posts that were posted after the time of the first follow.
 
-Learn more about [discoverability] on Mastodon.
+![A screenshot from my Mastodon feed showing my two first pinned posts.](MyPinnedPosts.png "Example of my pinned posts on Mastodon")
+
+Learn more about [discoverability] in the Mastodon documentation.
 
 ## Fill Out Your Profile
 
@@ -54,6 +56,8 @@ Also be sure to fill out all the other details on your profile. See the [Mastodo
 you can set up. The bio may be similar to the content of your #introduction post but go ahead and write both.
 
 A good profile picture and header banner are important to really make your profile stand out.
+
+![A screenshot showing what I have in my Mastodon profile.](MyProfile.png "Example of my profile")
 
 # Find Other Users To Follow
 
@@ -74,7 +78,8 @@ after you start following them.
 ## Finding Other Users
 
 A good way to start finding other interesting users to follow is to browse on [mastodon.social Explore]. This shows 
-posts from all the users that are known to the largest Mastodon server that have been getting a lot of likes or boosts.
+posts from all the users that are known to the largest Mastodon server that have been getting a lot of favorites or 
+boosts.
 
 When you find a user you want to follow copy the link for the user and search for it on your server.
 
@@ -110,6 +115,8 @@ about the related post. This can make your storage very expensive. So Mastodon h
 remove images after a certain amount of time. It will only remove images from other servers, so your original images 
 will be safe. Don't worry though, you can still go back and view these old posts with their images. Mastodon will fetch
 the image again if it is needed.
+
+[Check the tootctl documentation for details][Tootctl Media Remove].
 
 ## Favorites, Boosts, and Replies
 
@@ -149,3 +156,4 @@ may also increase the amount of moderation work you have to do.
 [Profile Setup]: https://docs.joinmastodon.org/user/profile/
 [Discoverability]: https://docs.joinmastodon.org/user/discoverability/
 [mastodon.social Explore]: https://mastodon.social/explore
+[Tootctl Media Remove]: https://docs.joinmastodon.org/admin/tootctl/#media-remove
