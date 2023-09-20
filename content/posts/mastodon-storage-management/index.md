@@ -1,7 +1,7 @@
 ---
 title: "Mastodon Storage Management"
 date: 2023-09-15T21:41:58-07:00
-draft: true
+draft: false
 summary: Manage the storage that Mastodon uses
 series: Personal Mastodon Server
 ---
@@ -126,5 +126,22 @@ After modifying the volume you must expand the file system in Linux. Follow this
 If you waited until the disk space was entirely consumed then you may get errors while expanding the file system. You
 can follow this [tutorial][No Space Tutorial] to mount /tmp to a temporary file system in memory.
 
+# Automated Backups
+
+AWS makes it easy to automate backing up your server. You can always manually create EBS volume snapshots as well.
+
+If your Mastodon server has everything including the database on one server then all you need to do is backup the image
+of that server. [AWS Data Lifecycle Manager] makes this easy to automate.
+
+## Setup Data Lifecycle Manager
+
+Go to Data Lifecycle Manager in the AWS EC2 console under the Elastic Block Store navigation section and click "Create
+lifecycle policy". Select "EBS-backed AMI policy" so you will have a full machine image, and you will have the option to
+reboot the server when backing up to ensure data consistency.
+
+Follow all the prompts to set up your backups. If you don't have tags on your instance you can still use the Name tag
+along with your instances name for the value. I set up my backups to run daily overnight and keep 3 copies.
+
 [Expand Linux Volume]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/recognize-expanded-volume-linux.html
 [No Space Tutorial]: https://repost.aws/knowledge-center/ebs-volume-size-increase
+[AWS Data Lifecycle Manager]: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/snapshot-lifecycle.html
