@@ -1,7 +1,9 @@
 baseURL: https://elephantintheroom.dev/
 languageCode: en-us
 title: Elephant In The Room
-theme: poison
+theme:
+  - poisonmods
+  - poison
 paginate: 10
 taxonomies:
   series: 'series'
